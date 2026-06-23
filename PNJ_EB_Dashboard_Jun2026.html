@@ -248,12 +248,10 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--
 
 <!-- NAV -->
 <div class="nav">
-  <button class="nav-tab on" onclick="switchTab('exec')">Executive Summary</button>
-  <button class="nav-tab" onclick="switchTab('kpi')">KPI Health</button>
-  <button class="nav-tab" onclick="switchTab('channel')">Channel Performance</button>
+  <button class="nav-tab on" onclick="switchTab('exec')">Executive Summary & KPI</button>
   <button class="nav-tab" onclick="switchTab('funnel')">Funnel & Conversion</button>
   <button class="nav-tab" onclick="switchTab('projects')">Projects & Risks</button>
-  <button class="nav-tab" onclick="switchTab('reco')">Strategic Recommendations</button>
+  <button class="nav-tab" onclick="switchTab('channel')">Channel Performance</button>
 </div>
 
 <!-- ═══════════════════════════════════
@@ -311,42 +309,7 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--
       </div>
     </div>
 
-    <!-- Monthly trend & insights side by side -->
-    <div class="grid-65">
-      <div class="card">
-        <div class="card-title">Facebook Reach — Xu hướng tháng</div>
-        <div class="card-sub">Lượt tiếp cận hàng tháng (người)</div>
-        <div class="bar-chart" id="fb-chart"></div>
-        <div class="footnote">* T6 chưa đủ tháng (tính đến 03/06)</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Key Insights</div>
-        <div class="card-sub">Điểm nổi bật chiến lược</div>
-        <div class="stack" style="gap:10px;">
-          <div class="insight"><div class="i-dot"></div><div><strong>Facebook T5 viral spike:</strong> Reach đạt 583K — cao nhất YTD, tăng 12x so với tháng 1. Cần xác định content/campaign để nhân rộng.</div></div>
-          <div class="insight"><div class="i-dot"></div><div><strong>LinkedIn engagement rate 15–34%</strong> — vượt benchmark ngành (~2-5%). Audience chất lượng cao: 55.9% nữ, 25-34 tuổi, Sales & Marketing.</div></div>
-          <div class="insight"><div class="i-dot"></div><div><strong>CV từ FB + LinkedIn vượt KPI năm (110%):</strong> Facebook dẫn đầu 568 CVs, LinkedIn 92 CVs. Ngoài ra Zalo đóng góp thêm 331 CVs (không tính vào KPI).</div></div>
-          <div class="insight"><div class="i-dot"></div><div><strong>Zalo kích hoạt từ T3:</strong> Từ gần 0 lên 490 lượt tương tác/tháng. Cần đầu tư content thường xuyên hơn.</div></div>
-        </div>
-      </div>
-    </div>
 
-    <!-- LinkedIn trend -->
-    <div class="card">
-      <div class="card-title">LinkedIn Impressions — Xu hướng tháng</div>
-      <div class="card-sub">Tổng lượt hiển thị (organic + sponsored)</div>
-      <div class="bar-chart" id="li-chart"></div>
-      <div class="footnote">* Tháng 2 spike do có content/post đạt viral spread (404K impressions). T6 partial.</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════
-     PAGE 2 · KPI HEALTH
-═══════════════════════════════════ -->
-<div id="page-kpi" class="page">
-  <div class="stack">
 
     <!-- Facebook KPIs -->
     <div class="card">
@@ -589,54 +552,8 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--
       <div class="insight"><div class="i-dot"></div><div><strong>Nhận xét chiến lược:</strong> Pillar <em>Giá trị thật</em> đang chiếm ưu thế vượt trội (90% bài viết). Pillar <em>Sự Tái Tạo</em> chỉ xuất hiện trong 14% — cần cân bằng để phản ánh đầy đủ EVP và củng cố positioning Lifestyle Retail Employer. Đề xuất: lên content plan H2 với tỉ lệ mục tiêu ~60% / 25% / 15%.</div></div>
     </div>
 
-    <!-- Projects KPIs -->
-    <div class="card">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:#7C3AED;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;">🎯</div>
-        <div>
-          <div class="card-title" style="margin-bottom:0;">Projects — Tiến độ 2026</div>
-          <div style="font-size:12px;color:var(--muted);">Cập nhật thủ công theo thực tế triển khai</div>
-        </div>
-      </div>
+        <div class="footnote" style="padding:0 4px;">Facebook: 63 bài xác nhận từ Meta export (Jan–Jun 17/2026). LinkedIn: 46 bài xác nhận từ LinkedIn Analytics export. EVP pillar data từ cột Thuộc tính trong Facebook post report. LinkedIn total followers: 53,275 (xác nhận từ page admin). KPI bài đăng cả 2 kênh: 190 bài/kênh/năm.</div>
 
-      <div class="prog-row">
-        <div class="prog-head"><span class="prog-label">🎤 The Retail Talk (3 sự kiện)</span><span class="prog-vals"><strong>0</strong> / 3 · 5%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:5%;background:linear-gradient(90deg,#3366FF,#7BA6FF);"></div></div>
-        <div class="prog-pct" style="color:var(--blue);">Planning — Đã kết nối N-2 của NBD. Next: Hẹn lịch gặp đơn vị trao đổi chương trình</div>
-      </div>
-
-      <div class="prog-row">
-        <div class="prog-head"><span class="prog-label">🎬 Job Video (6 video)</span><span class="prog-vals"><strong>0</strong> / 6 · 10%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:10%;background:linear-gradient(90deg,#3366FF,#7BA6FF);"></div></div>
-        <div class="prog-pct" style="color:var(--blue);">Planning — Đã có kịch bản 02 video đầu tiên. Next: Get buy-in đơn vị, liên hệ nhân vật quay</div>
-      </div>
-
-      <div class="prog-row">
-        <div class="prog-head"><span class="prog-label">💎 The Next Gem (trước T11/2026)</span><span class="prog-vals">Planning · 10%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:10%;background:linear-gradient(90deg,#3366FF,#7BA6FF);"></div></div>
-        <div class="prog-pct" style="color:var(--blue);">Planning — Đã duyệt format & định hướng. Next: Chuẩn bị proposal + kế hoạch truyền thông</div>
-      </div>
-
-      <div class="prog-row">
-        <div class="prog-head"><span class="prog-label">📡 Career Live (3 sự kiện)</span><span class="prog-vals"><strong>0</strong> / 3</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:0%;background:#E5E7EB;"></div></div>
-        <div class="prog-pct delta-na">Chưa triển khai</div>
-      </div>
-
-      <div class="prog-row">
-        <div class="prog-head"><span class="prog-label">🎓 Campus Unitour (6 hoạt động / 1,500 data)</span><span class="prog-vals"><strong>3</strong> / 6 · 50%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:50%;background:linear-gradient(90deg,var(--gold),var(--gold-l));"></div></div>
-        <div class="prog-pct" style="color:var(--gold);">In Progress — Đã tổ chức 3 hoạt động. Next: UEF iVenture Gateway (26/6)</div>
-      </div>
-
-      <div class="prog-row" style="margin-bottom:0;">
-        <div class="prog-head"><span class="prog-label">🏆 HR Award — Top 2 BPTW + Great Place To Work</span><span class="prog-vals">In Progress · 30%</span></div>
-        <div class="prog-track"><div class="prog-fill" style="width:30%;background:linear-gradient(90deg,var(--gold),var(--gold-l));"></div></div>
-        <div class="prog-pct" style="color:var(--gold);">In Progress — Kick-off truyền thông Vietnam BPTW. Next: Truyền thông campaign trên social</div>
-      </div>
-    </div>
-
-    <div class="footnote" style="padding:0 4px;">Facebook: 63 bài xác nhận từ Meta export (Jan–Jun 17/2026). LinkedIn: 46 bài xác nhận từ LinkedIn Analytics export. EVP pillar data từ cột Thuộc tính trong Facebook post report. LinkedIn total followers: 53,275 (xác nhận từ page admin). KPI bài đăng cả 2 kênh: 190 bài/kênh/năm.</div>
   </div>
 </div>
 
@@ -645,6 +562,100 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--
 ═══════════════════════════════════ -->
 <div id="page-channel" class="page">
   <div class="stack">
+    <!-- AD PERFORMANCE -->
+    <div class="ch-bar" style="border-left-color:#7C3AED;margin-top:8px;">
+      <div class="ch-bar-l">
+        <div class="ch-icon" style="background:#F5F3FF;">📣</div>
+        <div>
+          <div class="ch-name">Media Budget & Ad Performance</div>
+          <div class="ch-sub">Tổng ngân sách Media đã duyệt: 350,000,000 VND · YTD 2026</div>
+        </div>
+      </div>
+      <div class="ch-pill" style="background:#F5F3FF;color:#7C3AED;">Ngân sách năm: 350M VND</div>
+    </div>
+
+    <!-- Budget Overview -->
+    <div class="m-grid">
+      <div class="m-tile">
+        <div class="m-tile-label">Actual Spent YTD (confirmed)</div>
+        <div class="m-tile-val" style="color:#7C3AED;">~11M</div>
+        <div class="m-tile-sub">3.1% of 350M budget</div>
+      </div>
+      <div class="m-tile">
+        <div class="m-tile-label">Budget Remaining</div>
+        <div class="m-tile-val">~339M</div>
+        <div class="m-tile-sub">Allocated plan: 230M</div>
+      </div>
+      <div class="m-tile">
+        <div class="m-tile-label">Total Paid Reach YTD</div>
+        <div class="m-tile-val">661K</div>
+        <div class="m-tile-sub">2 campaigns confirmed</div>
+      </div>
+      <div class="m-tile">
+        <div class="m-tile-label">CV từ Paid (Job List T5)</div>
+        <div class="m-tile-val">165</div>
+        <div class="m-tile-sub">CPA: 36,383 VND/CV</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Budget Allocation — Media Request 2026</div>
+      <div class="card-sub">Theo kế hoạch Detail Plan · Tổng duyệt: 350M VND · Allocated: 230M VND</div>
+
+      <div class="prog-row">
+        <div class="prog-head">
+          <span class="prog-label">💼 I. Career Booster (Tuyển dụng)</span>
+          <span class="prog-vals"><strong>6M</strong> spent / 90M allocated</span>
+        </div>
+        <div class="prog-track"><div class="prog-fill" style="width:6.7%;background:linear-gradient(90deg,#1877F2,#60A5FA);"></div></div>
+        <div class="prog-pct" style="color:var(--blue);">6.7% — Job List T5 done: 6,003,257 VND · Reach 72,767 · Clicks 10,200 · 165 CVs</div>
+      </div>
+
+      <div class="prog-row">
+        <div class="prog-head">
+          <span class="prog-label">🎪 II. Event Booster (Sự kiện)</span>
+          <span class="prog-vals"><strong>0</strong> spent / 90M allocated</span>
+        </div>
+        <div class="prog-track"><div class="prog-fill" style="width:0%;background:#E5E7EB;"></div></div>
+        <div class="prog-pct delta-na">Chưa triển khai — Next Gem 50M · Retail Talk 20M · Career Live 20M</div>
+      </div>
+
+      <div class="prog-row" style="margin-bottom:0;">
+        <div class="prog-head">
+          <span class="prog-label">📣 III. Content & HR Award Booster</span>
+          <span class="prog-vals"><strong>5M</strong> spent / 50M allocated</span>
+        </div>
+        <div class="prog-track"><div class="prog-fill" style="width:10%;background:linear-gradient(90deg,var(--gold),var(--gold-l));"></div></div>
+        <div class="prog-pct" style="color:var(--gold);">10% — Best Workplace Vietnam: 4,999,948 VND · Reach 588,991 (Target 500K ✅)</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Campaign Performance — Confirmed Actual</div>
+      <div class="card-sub">Dữ liệu từ Media Request 2026_EBxMKT.xlsx · Looker Studio pending</div>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Campaign</th>
+            <th>Pillar</th>
+            <th class="num">Allocated</th>
+            <th class="num">Actual Spent</th>
+            <th class="num">Reach</th>
+            <th class="num">Clicks</th>
+            <th class="num">CV / Reg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Job List Tháng 5</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--blue);">6,003,257</td><td class="num">72,767</td><td class="num">10,200</td><td class="num" style="color:var(--green);">165 CVs</td></tr>
+          <tr><td>Best Workplace Vietnam 2026</td><td>HR Award</td><td class="num">5,000,000</td><td class="num" style="color:var(--blue);">4,999,948</td><td class="num" style="color:var(--green);">588,991 ✅</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>Job List Tháng 6</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--muted);">Đang chạy</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>AI Manager (Job Single)</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--muted);">Đang chạy</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>QLCC - Kinh Doanh (Job Single)</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--muted);">Đang chạy</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr style="opacity:.5;"><td>VN BPTW · GPTW · Next Gem · Retail Talk · Career Live · EB Posts × 6</td><td>Event + Content</td><td class="num">201,000,000</td><td class="num">Chưa triển khai</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+      <div class="footnote">* Actual spend confirmed từ file Excel. CPM/CPC chi tiết: connect Looker Studio <a href="https://datastudio.google.com/u/0/reporting/eec32c96-076a-4e0a-b388-02eaac51aad7/page/xwQRF" target="_blank" style="color:var(--blue);">HR - HO 2026 › HR 2026 ↗</a></div>
+    </div>
 
     <!-- FACEBOOK -->
     <div class="ch-bar" style="border-left-color:#1877F2;">
@@ -924,100 +935,6 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--
       <div class="insight" style="margin-top:14px;"><div class="i-dot"></div><div>Tỉ lệ & tốc độ phản hồi cải thiện rõ rệt từ T2 (16.7%, 43') lên T5 (71%, 19'). Cần duy trì và đặt mục tiêu &lt;30 phút phản hồi, tỉ lệ &gt;80% trong H2 để nâng chất lượng trải nghiệm ứng viên qua Zalo.</div></div>
     </div>
 
-    <!-- AD PERFORMANCE -->
-    <div class="ch-bar" style="border-left-color:#7C3AED;margin-top:8px;">
-      <div class="ch-bar-l">
-        <div class="ch-icon" style="background:#F5F3FF;">📣</div>
-        <div>
-          <div class="ch-name">Media Budget & Ad Performance</div>
-          <div class="ch-sub">Tổng ngân sách Media đã duyệt: 350,000,000 VND · YTD 2026</div>
-        </div>
-      </div>
-      <div class="ch-pill" style="background:#F5F3FF;color:#7C3AED;">Ngân sách năm: 350M VND</div>
-    </div>
-
-    <!-- Budget Overview -->
-    <div class="m-grid">
-      <div class="m-tile">
-        <div class="m-tile-label">Actual Spent YTD (confirmed)</div>
-        <div class="m-tile-val" style="color:#7C3AED;">~11M</div>
-        <div class="m-tile-sub">3.1% of 350M budget</div>
-      </div>
-      <div class="m-tile">
-        <div class="m-tile-label">Budget Remaining</div>
-        <div class="m-tile-val">~339M</div>
-        <div class="m-tile-sub">Allocated plan: 230M</div>
-      </div>
-      <div class="m-tile">
-        <div class="m-tile-label">Total Paid Reach YTD</div>
-        <div class="m-tile-val">661K</div>
-        <div class="m-tile-sub">2 campaigns confirmed</div>
-      </div>
-      <div class="m-tile">
-        <div class="m-tile-label">CV từ Paid (Job List T5)</div>
-        <div class="m-tile-val">165</div>
-        <div class="m-tile-sub">CPA: 36,383 VND/CV</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Budget Allocation — Media Request 2026</div>
-      <div class="card-sub">Theo kế hoạch Detail Plan · Tổng duyệt: 350M VND · Allocated: 230M VND</div>
-
-      <div class="prog-row">
-        <div class="prog-head">
-          <span class="prog-label">💼 I. Career Booster (Tuyển dụng)</span>
-          <span class="prog-vals"><strong>6M</strong> spent / 90M allocated</span>
-        </div>
-        <div class="prog-track"><div class="prog-fill" style="width:6.7%;background:linear-gradient(90deg,#1877F2,#60A5FA);"></div></div>
-        <div class="prog-pct" style="color:var(--blue);">6.7% — Job List T5 done: 6,003,257 VND · Reach 72,767 · Clicks 10,200 · 165 CVs</div>
-      </div>
-
-      <div class="prog-row">
-        <div class="prog-head">
-          <span class="prog-label">🎪 II. Event Booster (Sự kiện)</span>
-          <span class="prog-vals"><strong>0</strong> spent / 90M allocated</span>
-        </div>
-        <div class="prog-track"><div class="prog-fill" style="width:0%;background:#E5E7EB;"></div></div>
-        <div class="prog-pct delta-na">Chưa triển khai — Next Gem 50M · Retail Talk 20M · Career Live 20M</div>
-      </div>
-
-      <div class="prog-row" style="margin-bottom:0;">
-        <div class="prog-head">
-          <span class="prog-label">📣 III. Content & HR Award Booster</span>
-          <span class="prog-vals"><strong>5M</strong> spent / 50M allocated</span>
-        </div>
-        <div class="prog-track"><div class="prog-fill" style="width:10%;background:linear-gradient(90deg,var(--gold),var(--gold-l));"></div></div>
-        <div class="prog-pct" style="color:var(--gold);">10% — Best Workplace Vietnam: 4,999,948 VND · Reach 588,991 (Target 500K ✅)</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Campaign Performance — Confirmed Actual</div>
-      <div class="card-sub">Dữ liệu từ Media Request 2026_EBxMKT.xlsx · Looker Studio pending</div>
-      <table class="tbl">
-        <thead>
-          <tr>
-            <th>Campaign</th>
-            <th>Pillar</th>
-            <th class="num">Allocated</th>
-            <th class="num">Actual Spent</th>
-            <th class="num">Reach</th>
-            <th class="num">Clicks</th>
-            <th class="num">CV / Reg</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Job List Tháng 5</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--blue);">6,003,257</td><td class="num">72,767</td><td class="num">10,200</td><td class="num" style="color:var(--green);">165 CVs</td></tr>
-          <tr><td>Best Workplace Vietnam 2026</td><td>HR Award</td><td class="num">5,000,000</td><td class="num" style="color:var(--blue);">4,999,948</td><td class="num" style="color:var(--green);">588,991 ✅</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr><td>Job List Tháng 6</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--muted);">Đang chạy</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr><td>AI Manager (Job Single)</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--muted);">Đang chạy</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr><td>QLCC - Kinh Doanh (Job Single)</td><td>Career Booster</td><td class="num">6,000,000</td><td class="num" style="color:var(--muted);">Đang chạy</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-          <tr style="opacity:.5;"><td>VN BPTW · GPTW · Next Gem · Retail Talk · Career Live · EB Posts × 6</td><td>Event + Content</td><td class="num">201,000,000</td><td class="num">Chưa triển khai</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        </tbody>
-      </table>
-      <div class="footnote">* Actual spend confirmed từ file Excel. CPM/CPC chi tiết: connect Looker Studio <a href="https://datastudio.google.com/u/0/reporting/eec32c96-076a-4e0a-b388-02eaac51aad7/page/xwQRF" target="_blank" style="color:var(--blue);">HR - HO 2026 › HR 2026 ↗</a></div>
-    </div>
 
   </div>
 </div>
@@ -1269,91 +1186,6 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--
   </div>
 </div>
 
-<!-- ═══════════════════════════════════
-     PAGE 6 · STRATEGIC RECOMMENDATIONS
-═══════════════════════════════════ -->
-<div id="page-reco" class="page">
-  <div class="stack">
-
-    <div class="exec-hero" style="background:linear-gradient(135deg,#0B1E6D,#1939B7);">
-      <div class="exec-eyebrow">Strategic Recommendations · Q3-Q4 2026</div>
-      <div class="exec-title">Định hướng hành động<br><span class="gold-text">6 tháng cuối năm</span></div>
-      <div class="exec-sub">Dựa trên phân tích hiệu suất YTD, 5 ưu tiên chiến lược cho H2/2026 để đạt KPI và định vị Lifestyle Retail Employer.</div>
-    </div>
-
-    <div class="stack" style="gap:12px;">
-      <div class="rec-row">
-        <div class="rec-num">1</div>
-        <div class="rec-text"><strong>Tăng tốc Facebook Content & Follower Growth:</strong> Reach KPI (5M) cần 4.3M trong 7 tháng — ưu tiên viral EB content formats (Reels, Stories). Phân tích nguyên nhân spike T5 để nhân rộng. Tích hợp "Follow Page" CTA vào tất cả touchpoints.</div>
-      </div>
-      <div class="rec-row">
-        <div class="rec-num">2</div>
-        <div class="rec-text"><strong>Khai thác Zalo làm kênh CV Conversion:</strong> Zalo đang có conversion rate 3.8% — cao hơn kỳ vọng. Tăng frequency đăng bài từ 2 bài lên ít nhất 8-10 bài/tháng, kết hợp Zalo Job Post feature và Zalo Mini App để tăng CV submit trực tiếp.</div>
-      </div>
-      <div class="rec-row">
-        <div class="rec-num">3</div>
-        <div class="rec-text"><strong>Lập lịch và bắt đầu Projects ngay trong Q3:</strong> 5/6 projects chưa khởi động. Đề xuất: The Retail Talk T7, Career Live T8, Job Video T7-T9, Campus Unitour T9-T11. Cần xác nhận budget và resource allocation ngay.</div>
-      </div>
-      <div class="rec-row">
-        <div class="rec-num">4</div>
-        <div class="rec-text"><strong>Đẩy mạnh LinkedIn để đạt mốc 61K Followers:</strong> Cần +12K followers trong 7 tháng (~1,700/tháng). Tăng employee advocacy, tag đúng #Hiring hashtags, LinkedIn Newsletter, và LinkedIn Live cho các events EB.</div>
-      </div>
-      <div class="rec-row">
-        <div class="rec-num">5</div>
-        <div class="rec-text"><strong>Tối ưu Google Jobs Apply — kênh có CVR 12.8%:</strong> Đây là nguồn có tỷ lệ chuyển đổi cao nhất (12.8%). Đảm bảo tất cả job postings được structured data markup để xuất hiện trên Google Jobs. Kết hợp với SEO content về "việc làm PNJ".</div>
-      </div>
-      <div class="rec-row">
-        <div class="rec-num">6</div>
-        <div class="rec-text"><strong>Content Intelligence — EVP Pillars Tracking:</strong> Bắt đầu tag content theo 3 EVP pillars (Giá trị thật / Sự tái tạo / Khát khao vươn tầm) để đo hiệu quả từng trụ cột. Data này sẽ hỗ trợ HR Award application và định vị Lifestyle Retail Employer.</div>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="card">
-        <div class="card-title">📊 KPI Status Summary</div>
-        <table class="tbl">
-          <thead><tr><th>KPI</th><th class="num">Progress</th><th class="num">Status</th></tr></thead>
-          <tbody>
-            <tr><td>FB Reach</td><td class="num">14.1%</td><td class="num" style="color:var(--red);">🔴 Cần tăng tốc</td></tr>
-            <tr><td>FB Followers</td><td class="num">20.7%</td><td class="num" style="color:var(--amber);">🟡 Chậm</td></tr>
-            <tr><td>FB Engagement</td><td class="num">6.9%</td><td class="num" style="color:var(--red);">🔴 Cần tăng tốc</td></tr>
-            <tr><td>LI Posts (190)</td><td class="num">19.5%</td><td class="num" style="color:var(--amber);">🟡 Cần tăng tốc</td></tr>
-            <tr><td>LI Followers (61K)</td><td class="num">80.3%</td><td class="num" style="color:var(--blue);">🔵 Tốt</td></tr>
-            <tr><td>LI Impressions</td><td class="num">67.3%</td><td class="num" style="color:var(--blue);">🔵 Đúng tiến độ</td></tr>
-            <tr><td>LI Engagement</td><td class="num">48.3%</td><td class="num" style="color:var(--amber);">🟡 Cần tăng H2</td></tr>
-            <tr><td>Web Sessions</td><td class="num">34.0%</td><td class="num" style="color:var(--amber);">🟡 Cần đẩy</td></tr>
-            <tr><td>CV từ FB+LI</td><td class="num">110%</td><td class="num" style="color:var(--green);">✅ Vượt KPI</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card">
-        <div class="card-title">🎯 Focus Areas H2/2026</div>
-        <div class="stack" style="gap:8px;margin-top:4px;">
-          <div style="padding:12px 14px;background:#FEF2F1;border-radius:10px;font-size:13px;">
-            <strong style="color:var(--red);">🔴 Urgent:</strong> Khởi động Projects (5/6 chưa triển khai)
-          </div>
-          <div style="padding:12px 14px;background:#FEF2F1;border-radius:10px;font-size:13px;">
-            <strong style="color:var(--red);">🔴 Urgent:</strong> Facebook Reach strategy — cần 4.3M thêm
-          </div>
-          <div style="padding:12px 14px;background:#FFFBEB;border-radius:10px;font-size:13px;">
-            <strong style="color:var(--amber);">🟡 Important:</strong> LI Follower push to 61K milestone
-          </div>
-          <div style="padding:12px 14px;background:#FFFBEB;border-radius:10px;font-size:13px;">
-            <strong style="color:var(--amber);">🟡 Important:</strong> Tăng Zalo content frequency
-          </div>
-          <div style="padding:12px 14px;background:#ECFDF5;border-radius:10px;font-size:13px;">
-            <strong style="color:var(--green);">✅ Maintain:</strong> CV từ FB+LI — đã vượt KPI 110%
-          </div>
-          <div style="padding:12px 14px;background:#ECFDF5;border-radius:10px;font-size:13px;">
-            <strong style="color:var(--green);">✅ Maintain:</strong> LinkedIn engagement rate cao
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
 <script>
 // ── TAB NAVIGATION ──
 function switchTab(id) {
@@ -1363,55 +1195,8 @@ function switchTab(id) {
   event.target.classList.add('on');
 }
 
-// ── FACEBOOK REACH CHART ──
-const fbData = [
-  {m:'T1', v:20390},
-  {m:'T2', v:27788},
-  {m:'T3', v:26507},
-  {m:'T4', v:47735},
-  {m:'T5', v:583593},
-  {m:'T6*', v:186537},
-];
-const fbMax = Math.max(...fbData.map(d=>d.v));
-const fbChart = document.getElementById('fb-chart');
-fbData.forEach((d,i) => {
-  const pct = Math.round(d.v / fbMax * 100);
-  const isSpike = d.v === fbMax;
-  const col = document.createElement('div');
-  col.className = 'bar-col';
-  const shortV = d.v >= 1000 ? (d.v/1000).toFixed(0)+'K' : d.v;
-  col.innerHTML = `
-    <div class="bar-val" style="font-size:9px;color:${isSpike?'#3366FF':'#9CA3AF'};font-weight:${isSpike?'700':'400'}">${shortV}</div>
-    <div class="bar" style="height:${pct}%;background:${isSpike?'linear-gradient(180deg,#3366FF,#1939B7)':'#BFCFFF'};"></div>
-    <div class="bar-lbl" style="color:${isSpike?'#3366FF':'#9CA3AF'};font-weight:${isSpike?'700':'400'}">${d.m}</div>
-  `;
-  fbChart.appendChild(col);
-});
-
-// ── LINKEDIN IMPRESSIONS CHART ──
-const liData = [
-  {m:'T1', v:43160},
-  {m:'T2', v:404382},
-  {m:'T3', v:69501},
-  {m:'T4', v:68797},
-  {m:'T5', v:73952},
-  {m:'T6*', v:53611},
-];
-const liMax = Math.max(...liData.map(d=>d.v));
-const liChart = document.getElementById('li-chart');
-liData.forEach(d => {
-  const pct = Math.round(d.v / liMax * 100);
-  const isSpike = d.v === liMax;
-  const col = document.createElement('div');
-  col.className = 'bar-col';
-  const shortV = d.v >= 1000 ? (d.v/1000).toFixed(0)+'K' : d.v;
-  col.innerHTML = `
-    <div class="bar-val" style="font-size:9px;color:${isSpike?'#0A66C2':'#9CA3AF'};font-weight:${isSpike?'700':'400'}">${shortV}</div>
-    <div class="bar" style="height:${Math.max(pct,3)}%;background:${isSpike?'linear-gradient(180deg,#0A66C2,#004182)':'#BAD4F5'};"></div>
-    <div class="bar-lbl" style="color:${isSpike?'#0A66C2':'#9CA3AF'};font-weight:${isSpike?'700':'400'}">${d.m}</div>
-  `;
-  liChart.appendChild(col);
-});
+// ── CHARTS REMOVED (FB Reach & LI Impressions moved to Channel Performance tab) ──
 </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
